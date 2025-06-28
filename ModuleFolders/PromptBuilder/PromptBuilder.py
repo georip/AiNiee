@@ -103,12 +103,12 @@ class PromptBuilder(Base):
 
         # 检测原文语言是否能够构建动态示例
         if conv_source_lang not in ["japanese", "korean", "russian", "chinese_simplified", "chinese_traditional", "french",
-                                "german", "spanish", "english"]:
+                                "german", "spanish", "indonesia", "english"]:
             return "", ""
 
         # 获取自适应示例（无法构建english的）
         if conv_source_lang in ["japanese", "korean", "russian", "chinese_simplified", "chinese_traditional", "french",
-                                "german", "spanish"]:
+                                "german", "spanish", "indonesia"]:
             list2, list4 = PromptBuilder.build_adaptive_translation_sample(config, input_dict, conv_source_lang)
 
         # 将两个列表合并
@@ -128,6 +128,7 @@ class PromptBuilder(Base):
                     "spanish": "Texto de ejemplo",
                     "french": "Exemple de texte",
                     "german": "Beispieltext",
+                    "indonesia": "Contoh teks",
                 }
             }
 
@@ -336,6 +337,7 @@ class PromptBuilder(Base):
             "chinese_traditional": "翻譯示例文本",
             "english": "Sample Text",
             "spanish": "Texto de ejemplo",
+            "indonesia": "Contoh teks",
             "french": "Exemple de texte",
             "german": "Beispieltext",
         }
