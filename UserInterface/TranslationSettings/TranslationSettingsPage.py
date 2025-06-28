@@ -88,6 +88,7 @@ class TranslationSettingsPage(QFrame, Base):
             (self.tra("简中"), "chinese_simplified"),
             (self.tra("繁中"), "chinese_traditional"),
             (self.tra("西班牙语"), "spanish"),
+            (self.tra("印尼语"), "indonesia"),
         ]
 
         # 生成翻译后的配对列表
@@ -143,6 +144,7 @@ class TranslationSettingsPage(QFrame, Base):
             (self.tra("德语"), "german"),
             (self.tra("法语"), "french"),
             (self.tra("西班牙语"), "spanish"),
+            (self.tra("印尼语"), "indonesia"),
         ]
 
         # 生成翻译后的配对列表
